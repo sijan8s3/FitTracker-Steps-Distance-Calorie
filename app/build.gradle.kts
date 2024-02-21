@@ -91,4 +91,8 @@ dependencies {
 
     implementation ("androidx.work:work-runtime:2.7.1")
 
+    //Splash Screen
+    implementation("androidx.core:core-splashscreen:1.0.0")
+
+
 }

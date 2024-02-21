@@ -22,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.sijan.stepcounter.ui.theme.StepCounterTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,6 +32,10 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val splashScreen = installSplashScreen()
+        //splashScreen.setKeepOnScreenCondition { true }
+        //startSomeNextActivity()
+        //finish()
         setContent {
             StepCounterTheme {
                 StepCounterApplication()
